@@ -1,1 +1,2 @@
-# CircuitStream-AR-Project
+# CircuitStream AR Project
+ Circuit Stream AR Project
