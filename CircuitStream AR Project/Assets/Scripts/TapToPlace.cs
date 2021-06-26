@@ -7,6 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 public class TapToPlace : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject joystickCanvas;
 
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private ARRaycastManager raycastManager;
@@ -30,6 +31,7 @@ public class TapToPlace : MonoBehaviour
                 {
                     Pose hitPose = hits[0].pose;
                     spawnedPrefab = Instantiate(prefab, hitPose.position, Quaternion.identity);
+                    joystickCanvas.SetActive(true);
                 }
             }
         }
